@@ -33,11 +33,8 @@ function App() {
   const calendar = date => {
     setDate(date);
   }
-  
-  console.log("origem: " + origem);
-  console.log("destino: " + destino);
-  console.log("data: " + date)
-  
+
+
   function handleSubmit() {
     async function fetchPostAeroportos() {
       const response = await fetch(`https://api-voadora.dev.tegra.com.br/flight`, {
@@ -47,14 +44,27 @@ function App() {
           'Accept': 'application/json'
         },
         body: JSON.stringify({
-          from: {sigla}, // aeroporto de origem
-          to: {sigla}, // aeroporto de destino
+          from: 'BSB', // aeroporto de origem
+          to: 'VCP', // aeroporto de destino
           date: '2019-02-10' // data de partida
         })
       });
-      console.log(response.body);
+
+      // const apiReturn = response.body.map((listaDadosApi) => (
+      //   listaDadosApi.aeroporto_origem
+      // ))
+
+      console.log(response.json())
     }
+
+    fetchPostAeroportos();
+
+
+    // console.log("origem: " + origem);
+    // console.log("destino: " + destino);
+    // console.log("data: " + date)
   }
+
   return (
     <>
       <h1>Origem</h1>
