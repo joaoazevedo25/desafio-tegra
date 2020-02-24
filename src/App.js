@@ -6,6 +6,7 @@ import Aeroporto from './Aeroporto';
 
 function App() {
   const [aeroporto, setAeroporto] = useState([]);
+  const [opcoesVoo, setOpcoesVoo] = useState([]);
   const [sigla, setSigla] = useState([]);
   const [date, setDate] = useState(new Date());
   const [origem, setOrigem] = useState();
@@ -50,44 +51,53 @@ function App() {
         })
       });
 
-      // const apiReturn = response.body.map((listaDadosApi) => (
-      //   listaDadosApi.aeroporto_origem
-      // ))
-
       console.log(response.json())
     }
 
     fetchPostAeroportos();
 
-
-    // console.log("origem: " + origem);
-    // console.log("destino: " + destino);
-    // console.log("data: " + date)
   }
+  console.log("origem: " + origem);
+  console.log("destino: " + destino);
+  console.log("data: " + date);
 
   return (
     <>
-      <h1>Origem</h1>
-      <Aeroporto
-        aeroporto={aeroporto}
-        selectedAeroporto={origem}
-        onChangeAeroporto={e => setOrigem(e.target.value)}
-      />
-      <h1>Destino</h1>
-      <Aeroporto
-        aeroporto={aeroporto}
-        selectedAeroporto={destino}
-        onChangeAeroporto={e => setDestino(e.target.value)}
-      />
-      <h1>Partida</h1>
-      <DatePicker
-        onChange={calendar}
-        value={date}
-        minDate={new Date('2/10/2020')}
-        maxDate={new Date('2/18/2020')}
-        onChangeDate={e => setDate(e.target.value)}
-      />
-      <button onClick={handleSubmit}>Vai</button>
+      <div className="faixa">
+        <div className="display-screen">
+          <div className="display-info">
+            <h1 className="titulo">Origem</h1>
+            <Aeroporto
+              aeroporto={aeroporto}
+              selectedAeroporto={origem}
+              onChangeAeroporto={e => setOrigem(e.target.value)}
+            />
+          </div>
+
+          <div className="display-info">
+            <h1 className="titulo">Destino</h1>
+            <Aeroporto
+              aeroporto={aeroporto}
+              selectedAeroporto={destino}
+              onChangeAeroporto={e => setDestino(e.target.value)}
+            />
+          </div>
+
+          <div className="display-info">
+            <h1 className="titulo">Partida</h1>
+            <div className="calendar">
+              <DatePicker
+                onChange={calendar}
+                value={date}
+                minDate={new Date('2/10/2020')}
+                maxDate={new Date('2/18/2020')}
+                onChangeDate={e => setDate(e.target.value)}
+              />
+            </div>
+          </div>
+          <button onClick={handleSubmit}>Procurar</button>
+        </div>
+      </div>
     </>
   );
 }

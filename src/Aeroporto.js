@@ -7,12 +7,10 @@ export default function Aeroporto(props) {
     onChangeAeroporto
   } = props
   return (
-    <select value={selectedAeroporto} onChange={onChangeAeroporto}>
+    <select className="selector" value={selectedAeroporto} onChange={onChangeAeroporto}>
       {aeroporto.map((option) => (
         <option key={option} value={option}>{option}</option>
       ))}
     </select>
-
   )
-  
 }
