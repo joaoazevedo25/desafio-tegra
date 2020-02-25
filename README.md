@@ -4,7 +4,7 @@
 
 Essa é uma página web feita a partir do desafio da empresa de tecnologia Tegra.
 
-A página consiste em uma pesquisa de voos disponíveis a partir da selação de um aeroporto de origem, destino e data, utilizando _dropdowns_ e _picker_.
+A página consiste em uma pesquisa de voos disponíveis a partir da seleção de um aeroporto de origem, destino e data, utilizando _dropdowns_ e _picker_.
 
 Os dados são obtidos através de duas APIs,
 
