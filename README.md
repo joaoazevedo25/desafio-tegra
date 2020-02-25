@@ -18,10 +18,18 @@ Lista de voos:
 
 ## Comandos necessários
 ```
-  npx create-react-app instala o ambiente do React para começar uma SPA (Single Page Application)
-  npm install instala tudo que precisa para rodar a aplicação
-  npm install react-router-dom instala dependências do Reat Router
+  npx create-react-app
 ```
+  Instala o ambiente do React para começar uma SPA (Single Page Application)
+```
+  npm install
+```
+  Instala tudo que precisa para executar a aplicação
+```
+  npm install react-router-dom
+```
+  Instala as dependências do React Router
+  
 ## Habilitar servidor
 
 > npm start habilita o servidor em http://localhost:3000
