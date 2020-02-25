@@ -64,6 +64,7 @@ function App() {
   return (
     <>
       <div className="faixa">
+        <h1>Passagens Aéreas</h1>
         <div className="display-screen">
           <div className="display-info">
             <h1 className="titulo">Origem</h1>
@@ -95,8 +96,11 @@ function App() {
               />
             </div>
           </div>
-          <button onClick={handleSubmit}>Procurar</button>
+          <button className="button" onClick={handleSubmit}>Procurar</button>
         </div>
+      </div>
+      <div className="lista-voos">
+        <h2>Voos (quase) encontrados</h2>
       </div>
     </>
   );
