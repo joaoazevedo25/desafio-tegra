@@ -1,6 +1,6 @@
-#Desafio Tegra
+# Desafio Tegra
 
-##Busca de Voos utilizando API
+## Busca de Voos utilizando API
 
 Essa é uma página web feita a partir do desafio da empresa de tecnologia Tegra.
 
@@ -16,13 +16,13 @@ Lista de voos:
 
 > https://api-voadora.dev.tegra.com.br/flight
 
-##Comandos necessários
+## Comandos necessários
 ```
   npx create-react-app instala o ambiente do React para começar uma SPA (Single Page Application)
   npm install instala tudo que precisa para rodar a aplicação
   npm install react-router-dom instala dependências do Reat Router
 ```
-##Habilitar servidor
+## Habilitar servidor
 
 > npm start habilita o servidor em http://localhost:3000
 
