@@ -16,7 +16,7 @@ Lista de voos:
 
 > https://api-voadora.dev.tegra.com.br/flight
 
-## Comandos necessários
+## Instalação necessária
 ```
   npx create-react-app
 ```
