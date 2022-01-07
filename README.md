@@ -2,7 +2,7 @@
 
 ## Busca de Voos utilizando API
 
-Essa é uma página web feita a partir do desafio da empresa de tecnologia Tegra.
+Essa é uma página web feita a partir do desafio da empresa de tecnologia Tegra, utilizando ##React.
 
 A página consiste em uma pesquisa de voos disponíveis a partir da seleção de um aeroporto de origem, destino e data, utilizando _dropdowns_ e _picker_.
 
